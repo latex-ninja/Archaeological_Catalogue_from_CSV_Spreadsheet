@@ -1,0 +1,77 @@
+
+%-------------------------------------------------
+\KOMAoptions{fontsize=8pt}
+\chapter{Erläuterungen}
+\lipsum[55]
+\bigskip
+
+%-------------------------------------------------
+
+\begin{table}[h]
+	\centering
+\begin{tabular}[]{ll}
+	Abkürzungen &  \\
+	\midrule Anthro. & Anthropologische Bestimmung \\
+	Bildl. & Bildlich \\
+	Frgm. & Fragmente bzw. fragmentiert \\
+	MIZ & Mindestanzahl der bestatteten Individuen in der Urne \\
+	Ag & Gold \\
+	B & Bernstein \\
+	Br & Bronze \\
+	G & Glas \\
+	Ke & Keramik \\
+	BZ & Bronzezeit\\
+	EZ & Eisenzeit\\
+	\midrule Symbol & Anthropologische Bestimmung \\
+	\midrule \Female & weiblich \\
+	\Male & männlich \\
+	\bottomrule 
+\end{tabular}
+\caption{Erklärung der verwendeten Abkürzungen und Symbole.}
+\end{table}
+
+%-------------------------------------------------
+
+
+
+%-------------------------------------------------
+% CATALOGUE
+%-------------------------------------------------
+\chapter{Katalog der Katalogeinträge}
+%\setlength{\columnsep}{0.075\textwidth}
+
+\begin{multicols}{2}
+%-------------------------------------------------
+	
+\begin{entryForPlace}{Ein Ort}{Ha A1}{2}{\cite[69]{stachowiak}.}
+Ausgrabung fand statt; keine nennenswerte Dokumentation. \lipsum[33]
+\end{entryForPlace}\\[1em]
+
+\csvreader[late after line=\vfill]
+{catalogue-example.csv}{archaeoID=\UrnenID,MI=\MIZ,Anthro=\Anthro,Kontext=\Kontext,Datierung=\Datierung,Literatur=\Literatur,Abb=\Abb,Skizze=\Skizze}%
+{\MinipageSkizze{\UrnenID}{\MIZ}{\Anthro}{\Kontext}{\Datierung}{\Literatur}{\Abb}{\Skizze}\\%
+}
+%-------------------------------------------------
+
+\begin{entryForPlace}{Noch ein Ort}{Ha A1}{2}{\cite[69]{stachowiak}.}
+Ausgrabung fand statt; keine nennenswerte Dokumentation. \lipsum[33]
+\end{entryForPlace}\\[1em]
+
+\csvreader[late after line=\vfill]
+{catalogue-example.csv}{archaeoID=\UrnenID,MI=\MIZ,Anthro=\Anthro,Kontext=\Kontext,Datierung=\Datierung,Literatur=\Literatur,Abb=\Abb,Skizze=\Skizze}%
+{\MinipageSkizze{\UrnenID}{\MIZ}{\Anthro}{\Kontext}{\Datierung}{\Literatur}{\Abb}{\Skizze}\\%
+}
+%-------------------------------------------------
+
+\begin{entryForPlace}{Affenhausen}{Ha A1}{2}{\cite[69]{stachowiak}.}
+Ausgrabung fand statt; keine nennenswerte Dokumentation. \lipsum[33]
+\end{entryForPlace}\\[1em]
+
+\csvreader[late after line=\vfill]
+{catalogue-example.csv}{archaeoID=\UrnenID,MI=\MIZ,Anthro=\Anthro,Kontext=\Kontext,Datierung=\Datierung,Literatur=\Literatur,Abb=\Abb,Skizze=\Skizze}%
+{\MinipageSkizze{\UrnenID}{\MIZ}{\Anthro}{\Kontext}{\Datierung}{\Literatur}{\Abb}{\Skizze}\\%
+}
+%-------------------------------------------------
+
+%-------------------------------------------------
+\end{multicols}

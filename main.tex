@@ -1,0 +1,46 @@
+\documentclass{scrbook}
+\usepackage[utf8]{inputenc}
+
+\usepackage{lipsum}
+\usepackage{pgffor} % \foreach command
+\usepackage{booktabs} % \midrule command
+\setlength{\parindent}{0cm}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{paracol, multicol}
+\usepackage{float}
+\usepackage{marvosym}
+\usepackage{changepage}
+
+%-------------------------------------------------
+% ARCHAEOLOGY SPECIFIC 
+% csvsimple package for reading from CSV
+% commands for parsing catalgoe (input)
+% and biblatex using the archaeologie style
+%-------------------------------------------------
+\usepackage{csvsimple}
+\usepackage[backend=biber,style=archaeologie,citeauthorformat=firstfulltheninitials,noabbrv,scshape]{biblatex}
+\addbibresource{bibliographie.bib}
+\include{catalogue-commands}
+
+\title{An Archaeological Catalogue from a CSV spreadsheet using \texttt{csvsimple}}
+\author{\LaTeX{} Ninja}
+\date{July 2021}
+
+%-------------------------------------------------
+\begin{document}
+
+\maketitle 
+
+%-------------------------------------------------
+\include{catalogue-example}
+
+
+%-------------------------------------------------
+\newpage
+\listoffigures
+\newpage
+\printbibliography
+
+
+\end{document}

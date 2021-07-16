@@ -1,0 +1,39 @@
+%--------------------------------------------------------------------
+% INFO / CUSTOMIZATION
+%--------------------------------------------------------------------
+% if you wanted to only print the labels in case an entry isn't 
+% empty, you could integrate the following construct
+% (uncomment following lines)
+%\ifstrequal{#1}{}{% empty, write nothing
+%}{% false, i.e. not empty, then print label
+% LABEL: }
+%--------------------------------------------------------------------
+
+\newcommand{\MinipageSkizze}[8]{% Id, Kontext, Anthro, Datierung, Literatur, Abbildung, 
+%Skizze
+	%\raisebox{-0.7\height}{
+	\begin{minipage}{0.34\textwidth}
+		\raggedright 
+		\textbf{#1} \\[0.3em]
+		#4 \\
+		#5 \\
+		MIZ: #2 \\
+		Anthro.: #3 \\
+		Lit.: #6 \\
+		Abb.: #7 \\
+	\end{minipage}
+\hspace{.2em}
+	\begin{minipage}{0.25\textwidth}
+		\includegraphics[width=0.5\textwidth]{#8}
+	\end{minipage}\\
+}
+
+%--------------------------------------------------------------------
+
+\newenvironment{entryForPlace}[4]{%
+	{\raggedright\large\textbf{#1}} \\[0.5em]%
+	{Belegung: #2} \\%
+	{Gräber: #3} \\%
+	{Lit.: #4} \\[1em]%
+}{%
+}
